@@ -29,6 +29,7 @@ executable brainfuck-exe
                      , brainfuck
                      , mtl
                      , array 
+                     , bytestring
   default-language:    Haskell2010
 
 test-suite brainfuck-test

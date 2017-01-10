@@ -5,6 +5,7 @@ module Scanner
 , fromCheckedProgram
 , toProgram
 , scan
+, hello
 ) where
 
 data Program a = Program String
@@ -46,3 +47,5 @@ syntaxCheck p = case syntaxCheck_ p 0
 	syntaxCheck_ (']' : xs) 0    = Nothing
 	syntaxCheck_ (']' : xs) i    = syntaxCheck_ xs (i-1)
 	syntaxCheck_ (_ : xs) i      = syntaxCheck_ xs i
+
+hello = "[]><[][]><[][]><[][]><[][]><[][]><[][]><[][]><[][]><[][]><[][]>+>+>++>++<[>[->++++<<+++>]<<]>----.>->+.+++++++..+++.<+[][ This is hellbox, a 104 command Hello World               ][   >+>+>++>++<[>[->++++<<+++>]<<]>----.>>+.+++++++..+++   ][   .>.<<<+++++++++++++++.>>.+++.------.--------.>+.>++.   ][ -- Robert de Bath -- 2014                                ][]>>.<<<+++++++++++++++.>>.+++.------.--------.>+.+>++.<<<[][]><[][]><[][]><[][]><[][]><[][]><[][]><[][]><[][]><[][]><[]"
